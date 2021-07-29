@@ -10,6 +10,13 @@ const resolvers = {
                 return userData;
             }
         }
+    },
+
+    Mutation: {
+        login: ,
+        addUser:,
+        saveBook:,
+        removeBook:
     }
 };
   
