@@ -41,7 +41,17 @@ const resolvers = {
             return { token, user };
         },
 
-        // saveBook:,
+        saveBook: async (parent, args, context) => {
+            if (context.user) {
+                const updatedUser = await User.findOneAndUpdate(
+                    { _id: context.user._id },
+                    { $addToSet: { friends: friendId } },
+                    { new: true }
+                );
+
+                return updatedUser;
+            }
+        },
         
         // removeBook:
     }
