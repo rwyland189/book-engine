@@ -41,9 +41,9 @@ const resolvers = {
             return { token, user };
         },
 
-        saveBook:,
+        // saveBook:,
         
-        removeBook:
+        // removeBook:
     }
 };
   
